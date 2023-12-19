@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Gallery</title>
+    <style>
+        
+          .topnav {
+        overflow: hidden;
+        background-color: rgb(9, 9, 9);
+        position: fixed;
+        z-index:+1;
+        top: 0;
+        width: 100%;
+       
+  
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color:aqua;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #020af3;
+  color: white;
+}
+
+.topnav a.active {
+  background-color: #31f726;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+body {
+    
+    background:rgb(28, 27, 27);
+    margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  }
+        div.gallery {
+          border: 1px solid #ccc;
+        }
+        
+        div.gallery:hover {
+          border: 1px solid #fb0606;
+        }
+        
+        div.gallery img {
+          width: 600px;
+          height: 300px;
+          max-width: 100%;
+          max-height:auto;
+        }
+        
+        div.desc {
+          padding: 15px;
+          text-align: center;
+          color:white;
+          font-size: 15px;
+        }
+        
+        * {
+          box-sizing: border-box;
+        }
+        
+        .respons {
+          padding: 6px;
+          float: left;
+          width: 33%;
+          position: relative;
+        }
+        
+        @media only screen and (max-width: 700px) {
+          .respons {
+            width: 49.99999%;
+            margin: 6px 0;
+          }
+        }
+        
+        @media only screen and (max-width: 500px) {
+          .respons {
+            width: 100%;
+          }
+        }
+        
+        .clearfix:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+        .logo{
+    margin: auto;
+    position:relative;
+    max-width: 100%;
+    height:auto;
+    background-size: cover;
+}
+.responsiver {
+  max-width: 100%;
+  height: auto;
+}
+.container {
+  margin-top: auto;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+        </style>
+</head>
+<body>
+  <center>
+  <div class="topnav" id="myTopnav">
+    <a herf="index.html"><h5 style="color:aliceblue"> Event Management System        <h5></a>
+    <a href="index.html" >Home</a>
+    <a href="about.html" >About Us</a>
+    <a href="feedback.html">Feedback</a>
+    <a href="gallery.html" class="active">Gallery</a>
+    <a href="event.php">Events</a>
+    <a href="service.html" >Service Providers</a>
+    <a href="register2.html">Log-in</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div><br><br>
+  <script>
+  function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+  </script><br><br>
+      <div class="container">
+      <div class="logo">
+        <img src="gallery bg.jpg" alt="Logo" class="responsiver" >
+    </div>
+        <br>
+      
+      <h1 style="color:white">Our Packages</h1>
+      <br>
+      <h2 style="color:white; ">Weddings</h2>
+      
+
+    <div class="respons">
+        <div class="gallery">
+          <h3 style="color:white; text-align:center">Basic</h3>
+            <img src="basicwedding.jpg" alt="Cinque Terre" width="600" height="400">
+          </a>
+          <div class="desc">Package Rate: INR 449999/- onwards.
+            Package Inclusions: 10 rooms for 2 nights, 3-meals/day , complimentary room upgrade, dedicated space for baraat and more.
+          </div>
+        </div>
+      </div>
+      
+      
+      <div class="respons">
+        <div class="gallery">
+          <h3 style="color:white; text-align:center">Premium</h3>
+            <img src="premiumwedding.jpg" alt="Forest" width="600" height="400">
+          </a>
+          <div class="desc">Package Rate: INR 9,00,000 + 18% GST.
+            Package Inclusions: Venue, buffet lunch/dinner for 100 guests, decor, 02 wash &amp; change rooms,
+            complimentary room for bride and much more.
+            
+          </div>
+        </div>
+      </div>
+      
+      <div class="respons">
+        <div class="gallery">
+          <h3 style="color:white; text-align:center">Supreme</h3>
+            <img src="Luxurious-Wedding.jpg" alt="Northern Lights" width="600" height="400">
+          </a>
+          <div class="desc">Package Rate: INR 10 Lac++/day.
+            Package Inclusions: Up to 100 guests for lunch &amp; 200 guests for dinner, 30 rooms for one night, 1 upgrade to
+            a suite for both families,20% discount on laundry, F&amp;B, spa.
+          </div>
+        </div>
+      </div>
+      
+      <h2 style="color:white;">Birthdays</h2>
+      
+      <div class="respons">
+        <div class="gallery">
+          <h3 style="color:white; text-align:center">Basic</h3>
+            <img src="premiumbirthday.jpg" alt="Mountains" width="600" height="400">
+          </a>
+          <div class="desc">Package Rate:10000INR /- onwards.
+            Package Inclusions:Blue Theme, A meal for 50 persons. 
+            Package Rate:20000INR /- onwards.
+            Package Inclusions:Night Theme A meal for 50 persons .
+          </div>
+        </div>
+      </div> 
+      <div class="respons">
+        <div class="gallery">
+          <h3 style="color:white; text-align:center">Premium</h3>
+            <img src="basicbirthday.jpeg" alt="Mountains" width="600" height="400">
+          </a>
+          <div class="desc">Package Rate:40000INR /- onwards.
+            Package Inclusions:Alice in Wonderland Theme, A meal for 50 persons. 
+            Package Rate:50000INR /- onwards. Package Inclusions:Mermaid Theme 50 persons .
+          </div>
+        </div>
+      </div>
+      <div class="respons">
+        <div class="gallery">
+          <h3 style="color:white; text-align:center">Supreme</h3>
+            <img src="supremebirthday.png" alt="Mountains" width="600" height="400">
+          </a>
+          <div class="desc">Package Rate: 100000INR.
+            Package Inclusions:Casino &amp; Vegas Theme for 50 persons.
+            Package Rate: 102000INR.
+            Package Inclusions:Frozen/Fairy theme for 50 persons
+          </div>
+        </div>
+      </div>
+      <h2 style="color:white;">Festivals</h2>
+      <div class="respons">
+        <div class="gallery">
+          <h3 style="color:white; text-align:center">Diwali</h3>
+            <img src="diwaliparty.jpg" alt="Mountains" width="600" height="400">
+          </a>
+          <div class="desc">Package Rate: INR 500000/-.
+            Package Inclusions: 100 rooms for 2 nights, All meals for the residential guests, complimentary room.
+            upgrade, dedicated open space for fire crackers more.
+          </div>
+        </div>
+      </div>
+      <div class="respons">
+        <div class="gallery">
+          <h3 style="color:white; text-align:center">Janmashtami</h3>
+            <img src="janmashtmiparty.png" alt="Mountains" width="600" height="400">
+          </a>
+          <div class="desc">Package Rate: INR 40000 (one day package).
+  Package Inclusions: Venue, buffet lunch/dinner for 100 guests, decor,special janmashtmi celebration 02 wash
+            &amp; change rooms.
+          </div>
+        </div>
+      </div>
+      <div class="respons">
+        <div class="gallery">
+          <h3 style="color:white; text-align:center">Holi</h3>
+            <img src="holiparty.jpg" alt="Mountains" width="600" height="400">
+          </a>
+          <div class="desc">Package Rate: INR 45000 (one day package).
+             Package Inclusions: Up to 100 guests for lunch &amp; 100 guests for dinner,02 wash &amp; change rooms with Exclusive Decoration and fun events.
+          </div>
+        </div>
+      </div>
+    </div>
+      </center> 
+</body>
+</html>

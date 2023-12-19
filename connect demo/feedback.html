@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Feedback</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        background-image:url("feedbackbg2.png");
+        width:100%;
+        height:800px;
+        background-size:cover;
+        position:relative;
+        background-repeat: no-repeat;
+        background-position:center;
+    }
+    .topnav {
+  overflow: hidden;
+  background-color: rgb(9, 9, 9);
+  position: fixed;
+  z-index:+1;
+  top: 0;
+  width: 100%;
+ 
+  
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color:aqua;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #1613c6;
+  color: white;
+}
+
+.topnav a.active {
+  background-color: #31f726;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+    .form-box{
+    width: 380px;
+    display:-ms-inline-grid;
+    height: 100%;
+    position: left;
+    margin: 2% auto;
+    background:transparent;
+    border-color: black;
+    border-radius: 50px;
+    box-shadow:0 0 20px 9px #0a0a0af0;
+    padding: 10px;
+    overflow:hidden;
+    outline: black;
+    }
+    .submit-btn{
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background: #1c24f5;
+    border:0;
+    outline: none;
+    border-radius: 30px;
+    margin-top: 30;
+    margin-bottom: 34;
+    
+}
+.submit-btn:hover{
+    color:black;
+    background-color: aqua;
+}
+.input-field{
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0 ;
+    border-left: 0;
+    border-top:0;
+    border-right: 0;
+    border-bottom: 1px solid rgb(17, 1, 1);
+    outline:none;
+    background:transparent;
+    color: rgb(10, 9, 9);
+}
+.check-box{
+    margin: 30px 10px 34px 0;
+}
+footer{
+  text-align: center;
+  padding: 3px;
+  display: block;
+  opacity: 0.7;
+  
+  background-color:rgb(12, 11, 11);
+  color: white;
+}
+</style>
+<body>
+    <div class="topnav" id="myTopnav">
+        <a herf="index.html"><h5 style="color:aliceblue"> Event Management System        <h5></a>&amp;&amp;
+        <a href="index.html" >Home</a>
+        <a href="about.html" >About Us</a>
+        <a href="feedback.html" class="active">Feedback</a>
+        <a href="gallery.html" >Gallery</a>
+        <a href="event.php">Events</a>
+        <a href="service.html" >Service Providers</a>
+        <a href="register2.html">Log-in</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div><br><br>
+      <script>
+      function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+      </script>
+    <center>
+<form class="form-box" action="feedbackconn.php" method="post">
+   <br><br><h1 style="color:rgb(45, 45, 237);  font-family:Times New Roman">  Feedback Please..!</h1><br><br>
+    <input type="text" class="input-field" id="UName" name="UName" maxlength="35" placeholder="Enter Name" onkeyup="textonly(this)" title="Enter the valid name" required><br><br> 
+    <input type="email"  class="input-field" id="email_add" maxlength="50" name="email_add" placeholder=" Email Id example@example.com" pattern='^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$' title="Enter the valid mail id" required><br><br> 
+    <label for="Ratings">Rate us....</label> 
+    <input type="radio" name="Ratings" value="1" required>1
+    <input type="radio" name="Ratings" value="2" required>2 
+    <input type="radio" name="Ratings" value="3" required>3
+    <input type="radio" name="Ratings" value="4" required>4
+    <input type="radio" name="Ratings" value="5" required>5 <br> 
+    <textarea cols="75" rows="5" class="input-field" id="Comments" name="Comments" placeholder="Comments please.." required></textarea><br><br> 
+    <input type="checkbox" class="checkbox"> I agree to the terms and condition<br><br>
+    <button type="submit" name="submit" class="submit-btn">Submit</button>
+</form>
+<h2 style="color:rgb(45, 45, 237);">For More Information and Queries Please Contact us  </h2>
+
+</center>
+<script type="text/javascript">
+  function textonly(input){
+    var let=/[^a-z ]/gi;
+    input.value = input.value.replace(let,"");
+  }
+
+  function numberonly(input){
+    var num =/[^0-9]/gi;
+    input.value = input.value.replace(num,"");
+  }
+</script>
+<footer>
+  <br><br>
+<i class="fa fa-phone" style="font-size:48px; color:rgb(135, 206, 250)"></i>  : 7470644478 , 7024296778
+<i class="fa fa-envelope" style="font-size:48px;color:rgb(135, 206, 250);"></i>  : pratyanchs01@gmail.com
+
+<i class="fa fa-home" style="font-size:48px; color:rgb(135, 206, 250);"></i>: Event management System .Gwalior<br><br>
+
+<p Style="color:rgb(173, 158, 158); text-align: center; ">@2023copyright.All rights reserved.</p><br><hr>
+<br><br><br>
+</footer>
+</body>
+</html>
